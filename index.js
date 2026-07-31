@@ -1,5 +1,7 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 const { Rcon } = require('rcon-client');
+const http = require('http');
+http.createServer((req, res) => res.end("Бот активен!")).listen(process.env.PORT || 3000);
 
 const config = {
     token: process.env.DISCORD_TOKEN,
